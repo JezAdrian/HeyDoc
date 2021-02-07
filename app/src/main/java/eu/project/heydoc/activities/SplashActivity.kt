@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-
+        // place to change the font
         val typeface: Typeface =
             Typeface.createFromAsset(assets, "carbon bl.ttf")
         tv_app_name.typeface = typeface
