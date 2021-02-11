@@ -1,4 +1,4 @@
-package com.projemanag.activities
+package eu.project.heydoc.activities
 
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
