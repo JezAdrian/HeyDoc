@@ -5,10 +5,11 @@ import android.graphics.Typeface
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.projemanag.activities.BaseActivity
 import eu.project.heydoc.R
 import kotlinx.android.synthetic.main.activity_intro.*
 
-class IntroActivity : AppCompatActivity() {
+class IntroActivity : BaseActivity() {
 
     /**
      * This function is auto created by Android when the Activity Class is created.

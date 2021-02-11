@@ -3,7 +3,7 @@
     <string name="app_name_on_screen">HeyDoc!!</string>
 
     <string name="image_contentDescription">image</string>
-    <string name="let_s_get_started_text" >Zaczynajmy!!</string>
+    <string name="let_s_get_started_text">Zaczynajmy!!</string>
     <string name="intro_text_description">Zapisuj wizyty, czekaj na powiadomienia, dodawaj ulubionych lekarzy.</string>
     <string name="sign_in">Zaloguj się</string>
     <string name="sign_up">Zarejestruj się</string>
@@ -12,5 +12,7 @@
     <string name="name">Imię</string>
     <string name="password">Hasło</string>
     <string name="email">Email</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="please_click_back_again_to_exit">Please Click back to exit</string>
 
 </resources>
