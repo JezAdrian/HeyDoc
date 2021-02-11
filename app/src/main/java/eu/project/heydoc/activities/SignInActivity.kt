@@ -3,7 +3,7 @@ package eu.project.heydoc.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import com.projemanag.activities.BaseActivity
+
 import eu.project.heydoc.R
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*

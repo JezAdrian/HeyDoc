@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowManager
 import android.widget.Toast
-import com.projemanag.activities.BaseActivity
 import eu.project.heydoc.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
@@ -56,13 +55,13 @@ class SignUpActivity : BaseActivity() {
 
     private fun validateForm(name: String, email:String, password:String):Boolean{
         return when{
-            TextUtils.isEmpty(name) -> {showErrorSnackBar("Please Enter a name ")
+            TextUtils.isEmpty(name) -> {showErrorSnackBar(resources.getString(R.string.please_enter_name))
                 false
             }
-            TextUtils.isEmpty(email) -> {showErrorSnackBar("Please Enter a email ")
+            TextUtils.isEmpty(email) -> {showErrorSnackBar(resources.getString(R.string.please_enter_email))
                 false
             }
-            TextUtils.isEmpty(password) -> {showErrorSnackBar("Please Enter a password ")
+            TextUtils.isEmpty(password) -> {showErrorSnackBar(resources.getString(R.string.please_enter_password))
                 false
             }else ->{
                 true

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import com.projemanag.activities.BaseActivity
 import eu.project.heydoc.R
 import kotlinx.android.synthetic.main.activity_splash.*
 

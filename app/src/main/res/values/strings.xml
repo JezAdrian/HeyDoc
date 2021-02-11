@@ -12,7 +12,10 @@
     <string name="name">Imię</string>
     <string name="password">Hasło</string>
     <string name="email">Email</string>
-    <string name="please_wait">Please Wait</string>
-    <string name="please_click_back_again_to_exit">Please Click back to exit</string>
+    <string name="please_wait">Prosze Czekać</string>
+    <string name="please_click_back_again_to_exit">Naciśnij przycisk wstecz ponownie, by wrócić!</string>
+    <string name="please_enter_name">Proszę podać imię</string>
+    <string name="please_enter_email">Proszę podać email</string>
+    <string name="please_enter_password">Proszę podać hasło</string>
 
 </resources>

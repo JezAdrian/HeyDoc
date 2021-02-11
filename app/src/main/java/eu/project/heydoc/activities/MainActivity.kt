@@ -2,7 +2,7 @@ package eu.project.heydoc.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.projemanag.activities.BaseActivity
+
 import eu.project.heydoc.R
 
 class MainActivity : BaseActivity() {

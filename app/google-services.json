@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "286485640167",
-    "project_id": "projemanage-e27fa",
-    "storage_bucket": "projemanage-e27fa.appspot.com"
+    "project_number": "475662722886",
+    "project_id": "heydoc-ab293",
+    "storage_bucket": "heydoc-ab293.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:286485640167:android:5baf6a17c9880cd6e1c342",
+        "mobilesdk_app_id": "1:475662722886:android:65400c8231df60d5052747",
         "android_client_info": {
-          "package_name": "com.projemanag"
+          "package_name": "eu.project.heydoc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "286485640167-r58f9e51kd6d4c90f6mfc8o44jp29ogg.apps.googleusercontent.com",
+          "client_id": "475662722886-eo7ab3kng51astc748h5udkuegeqb00l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdxqcGm6RObrl_ui7OMFuwaq2fI-YVmqY"
+          "current_key": "AIzaSyACUD3z5S_DSiYctIp6ampyjDbsG4AYMRw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "286485640167-r58f9e51kd6d4c90f6mfc8o44jp29ogg.apps.googleusercontent.com",
+              "client_id": "475662722886-eo7ab3kng51astc748h5udkuegeqb00l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
