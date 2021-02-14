@@ -7,9 +7,12 @@
       <w>działać</w>
       <w>hasło</w>
       <w>imię</w>
+      <w>konta</w>
       <w>lekarzy</w>
+      <w>logowanie</w>
       <w>naciśnij</w>
       <w>nami</w>
+      <w>nieudane</w>
       <w>podaj</w>
       <w>podać</w>
       <w>ponownie</w>
@@ -18,6 +21,7 @@
       <w>proszę</w>
       <w>przycisk</w>
       <w>swoje</w>
+      <w>udało</w>
       <w>ulubionych</w>
       <w>użytkownika</w>
       <w>wizyty</w>
@@ -27,7 +31,9 @@
       <w>zacznij</w>
       <w>zaczynajmy</w>
       <w>zaloguj</w>
+      <w>zalożyć</w>
       <w>zapisuj</w>
+      <w>zarejestrować</w>
       <w>zarejestruj</w>
     </words>
   </dictionary>

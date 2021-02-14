@@ -3,21 +3,24 @@ package eu.project.heydoc.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import eu.project.heydoc.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
 class SignUpActivity : BaseActivity() {
-
+    private lateinit var auth: FirebaseAuth
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_sign_up)
-
+        auth = FirebaseAuth.getInstance()
 
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -48,7 +51,21 @@ class SignUpActivity : BaseActivity() {
         val password : String = et_password.text.toString().trim{ it <= ' '}
 
         if(validateForm(name,email,password)){
-            Toast.makeText(this, "CONGRATZ BRO", Toast.LENGTH_SHORT).show()
+            showProgressDialog(resources.getString(R.string.please_wait))
+            auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
+                task ->
+                hideProgressDialog()
+                if (task.isSuccessful){
+                    val firebaseUser : FirebaseUser = task.result!!.user!!
+                    val registeredEmail = firebaseUser.email!!
+                    Toast.makeText(this, "$name udało ci Się zarejestrować  $registeredEmail", Toast.LENGTH_SHORT).show()
+                    auth.signOut()
+                    finish()
+                }else {
+                    Log.w("SignUp", "createUserWithEmail:failure", task.exception)
+                    Toast.makeText(this, "Nie udało się zalożyć konta", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
     }

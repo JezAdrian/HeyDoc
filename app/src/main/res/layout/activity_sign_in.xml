@@ -68,7 +68,7 @@ tools:context=".activities.SignUpActivity">
                 android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_email"
+                    android:id="@+id/et_log_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
@@ -84,7 +84,7 @@ tools:context=".activities.SignUpActivity">
                 android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/et_password"
+                    android:id="@+id/et_log_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
@@ -93,7 +93,7 @@ tools:context=".activities.SignUpActivity">
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_sign_up"
+                android:id="@+id/btn_loggin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
