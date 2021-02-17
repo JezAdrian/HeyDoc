@@ -9,6 +9,8 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import eu.project.heydoc.R
+import eu.project.heydoc.firestore.FireStoreClass
+import eu.project.heydoc.models.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
@@ -54,13 +56,12 @@ class SignUpActivity : BaseActivity() {
             showProgressDialog(resources.getString(R.string.please_wait))
             auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
                 task ->
-                hideProgressDialog()
+
                 if (task.isSuccessful){
                     val firebaseUser : FirebaseUser = task.result!!.user!!
                     val registeredEmail = firebaseUser.email!!
-                    Toast.makeText(this, "$name udało ci Się zarejestrować  $registeredEmail", Toast.LENGTH_SHORT).show()
-                    auth.signOut()
-                    finish()
+                    val user = User(firebaseUser.uid,name,registeredEmail)
+                    FireStoreClass().registerUser(this,user)
                 }else {
                     Log.w("SignUp", "createUserWithEmail:failure", task.exception)
                     Toast.makeText(this, "Nie udało się zalożyć konta", Toast.LENGTH_SHORT).show()
@@ -88,7 +89,12 @@ class SignUpActivity : BaseActivity() {
     }
 
 
-
+    fun userRegisteredSuccess(){
+        Toast.makeText(this, "you have registered the email address ", Toast.LENGTH_SHORT).show()
+        hideProgressDialog()
+        FirebaseAuth.getInstance().signOut()
+        finish()
+    }
 
 
 

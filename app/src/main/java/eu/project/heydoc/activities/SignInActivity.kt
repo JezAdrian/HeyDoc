@@ -9,6 +9,8 @@ import android.view.WindowManager
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import eu.project.heydoc.R
+import eu.project.heydoc.firestore.FireStoreClass
+import eu.project.heydoc.models.User
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
 
@@ -30,6 +32,13 @@ class SignInActivity : BaseActivity() {
 
 
         setupActionBar()
+    }
+
+    fun signInSuccess(user: User){
+        hideProgressDialog()
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
+
     }
 
 
@@ -58,9 +67,7 @@ class SignInActivity : BaseActivity() {
                         task ->
                         hideProgressDialog()
                         if (task.isSuccessful) {
-                            val user = auth.currentUser
-                            Log.d("Loggin", "LogginUserWithEmail:success")
-                            startActivity(Intent(this,MainActivity::class.java))
+                            FireStoreClass().signInUser(this)
                         } else {
                             Log.w("Loggin", "createUserWithEmail:failure", task.exception)
                             Toast.makeText(this, "Logowanie nieudane.", Toast.LENGTH_SHORT).show()
