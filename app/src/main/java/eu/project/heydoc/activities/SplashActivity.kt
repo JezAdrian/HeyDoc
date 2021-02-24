@@ -37,12 +37,12 @@ class SplashActivity : BaseActivity() {
 
         Handler().postDelayed({
 
-            //val currentUserID = FireStoreClass().getCurrentUserId()
-            //if (currentUserID != null){
-                //startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-           //}else{
+            val currentUserID = FireStoreClass().getCurrentUserId()
+            if (currentUserID != null){
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+           }else{
                 startActivity(Intent(this@SplashActivity, IntroActivity::class.java))
-            //}
+            }
             finish()
         }, 2500)
     }

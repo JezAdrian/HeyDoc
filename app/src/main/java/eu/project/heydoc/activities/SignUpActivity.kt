@@ -33,7 +33,6 @@ class SignUpActivity : BaseActivity() {
         setupActionBar()
     }
 
-
     private fun setupActionBar() {
 
         setSupportActionBar(toolbar_sign_up_activity)
@@ -47,6 +46,7 @@ class SignUpActivity : BaseActivity() {
         toolbar_sign_up_activity.setNavigationOnClickListener { onBackPressed() }
         btn_sign_up.setOnClickListener { registerUser() }
     }
+
     private fun registerUser(){
         val name : String = et_name.text.toString().trim{ it <= ' '}
         val email : String = et_email.text.toString().trim{ it <= ' '}
@@ -68,7 +68,13 @@ class SignUpActivity : BaseActivity() {
                 }
             }
         }
+    }
 
+    fun userRegisteredSuccess(){
+        Toast.makeText(this, "Udana rejestracja, miłego korzystania :) ", Toast.LENGTH_SHORT).show()
+        hideProgressDialog()
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
 
     private fun validateForm(name: String, email:String, password:String):Boolean{
@@ -87,15 +93,4 @@ class SignUpActivity : BaseActivity() {
 
         }
     }
-
-
-    fun userRegisteredSuccess(){
-        Toast.makeText(this, "you have registered the email address ", Toast.LENGTH_SHORT).show()
-        hideProgressDialog()
-        FirebaseAuth.getInstance().signOut()
-        finish()
-    }
-
-
-
 }

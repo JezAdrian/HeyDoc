@@ -17,5 +17,14 @@
     <string name="please_enter_name">Proszę podać imię</string>
     <string name="please_enter_email">Proszę podać email</string>
     <string name="please_enter_password">Proszę podać hasło</string>
+    <string name="nav_my_profile">Mój Profil</string>
+    <string name="nav_sign_out">Wyloguj Się</string>
+    <string name="mobile">Telefon</string>
+    <string name="update">Uaktualnij Dane</string>
+    <string name="my_profile">Mój Profil</string>
+    <string name="camera">Uchwyć swój piękny uśmiech aparatem</string>
+    <string name="gallery">Zdjęcie z Galerii</string>
+    <string name="action">Wybierz Opcję</string>
+
 
 </resources>

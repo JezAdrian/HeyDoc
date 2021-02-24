@@ -34,13 +34,6 @@ class SignInActivity : BaseActivity() {
         setupActionBar()
     }
 
-    fun signInSuccess(user: User){
-        hideProgressDialog()
-        startActivity(Intent(this,MainActivity::class.java))
-        finish()
-
-    }
-
 
     private fun setupActionBar() {
 
@@ -56,7 +49,6 @@ class SignInActivity : BaseActivity() {
         btn_loggin.setOnClickListener { loginUser() }
     }
 
-
     private fun loginUser(){
         val email : String = et_log_email.text.toString().trim{ it <= ' '}
         val password : String = et_log_password.text.toString().trim{ it <= ' '}
@@ -67,14 +59,22 @@ class SignInActivity : BaseActivity() {
                         task ->
                         hideProgressDialog()
                         if (task.isSuccessful) {
-                            FireStoreClass().signInUser(this)
+                            FireStoreClass().loadUserData(this)
                         } else {
                             Log.w("Loggin", "createUserWithEmail:failure", task.exception)
                             Toast.makeText(this, "Logowanie nieudane.", Toast.LENGTH_SHORT).show()
                         }
 
                     }
-        }}
+        }
+    }
+
+    fun signInSuccess(user: User){
+        hideProgressDialog()
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
+
+    }
 
     private fun validateForm( email:String, password:String):Boolean{
         return when{
